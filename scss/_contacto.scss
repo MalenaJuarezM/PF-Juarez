@@ -1,0 +1,105 @@
+/*Main de contacto*/
+
+.FlexContact {
+  @include flex-row-wrap-center;
+}
+
+/*Formulario*/
+
+.form {
+  max-width: 500px;
+  color: $verde-medio;
+  margin: 0px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "nombre apellido"
+    "line1 line2"
+    "email telefono"
+    "line3 line4"
+    "comentario comentario"
+    "line5 line5"
+    "boton boton";
+
+  label {
+    margin-top: 20px;
+  }
+
+  .fillin {
+    background: none;
+    border: none;
+    border-bottom: $borde-general;
+    margin-right: 20px;
+
+    &:hover {
+      border: $borde-general;
+      border-radius: 2px;
+    }
+  }
+
+  textarea {
+    grid-area: line5;
+    height: 70px;
+    resize: none;
+  }
+
+  .button {
+    grid-area: boton;
+    display: block;
+    @include sizes (60px, 25px);
+    margin: 0px auto;
+    margin-top: 20px;
+    border: $borde-general;
+    border-radius: 2px;
+    background-color: $gris-claro;
+    color: $verde-medio;
+    cursor: pointer;
+
+    &:hover {
+      border: $borde-boton-hover;
+      background-color: $verde-medio;
+      color: $gris-claro;
+    }
+  }
+}
+
+form label:nth-child(1) {
+  grid-area: nombre;
+}
+
+form label:nth-child(2) {
+  grid-area: line1;
+}
+
+form label:nth-child(3) {
+  grid-area: apellido;
+}
+
+form label:nth-child(4) {
+  grid-area: line2;
+}
+
+form label:nth-child(5) {
+  grid-area: email;
+}
+
+form label:nth-child(6) {
+  grid-area: line3;
+}
+
+form label:nth-child(7) {
+  grid-area: telefono;
+}
+
+form label:nth-child(8) {
+  grid-area: line4;
+}
+
+form label:nth-child(9) {
+  grid-area: comentario;
+}
+
+.map iframe {
+  @include sizes (450px, 270px);
+}

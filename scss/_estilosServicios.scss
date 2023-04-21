@@ -1,0 +1,64 @@
+/*GridEstilos + GridServicios*/
+
+.gridEstilos,
+.gridServicios {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 50px;
+  justify-items: center;
+  align-items: center;
+
+  .Box1 {
+    grid-column: 1/5;
+  }
+
+  .Pic1 {
+    grid-column: 5/6;
+  }
+
+  .Pic2 {
+    grid-column: 1/2;
+  }
+
+  .Box2 {
+    grid-column: 2/6;
+  }
+
+  .Box3 {
+    grid-column: 1/5;
+  }
+
+  .Pic3 {
+    grid-column: 5/6;
+  }
+
+  .Pic4 {
+    grid-column: 1/2;
+  }
+
+  .Box4 {
+    grid-column: 2/6;
+  }
+}
+
+.box {
+  max-width: 1000px;
+  min-height: 200px;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:hover {
+    background-color: $gris-claro;
+  }
+}
+
+
+.pic img {
+  max-width: 250px;
+  border: $borde-pic;
+  border-radius: 5px;
+}

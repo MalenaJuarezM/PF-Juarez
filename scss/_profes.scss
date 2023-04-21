@@ -1,0 +1,47 @@
+/*Main de profes*/
+
+/*Rotating Card*/
+
+.flip-card {
+  @include sizes (280px, 380px);
+  margin-bottom: 20px;
+  perspective: 1000px;
+
+  .flip-card-inner {
+    position: relative;
+    @include sizes (100%, 100%);
+    text-align: center;
+    transition: transform 1.2s;
+    transform-style: preserve-3d;
+
+    .flip-card-front {
+      position: absolute;
+      @include sizes (100%, 100%);
+      backface-visibility: hidden;
+
+      img {
+        border: $borde-pic;
+        border-radius: 5px;
+        width: 100%;
+      }
+    }
+
+    .flip-card-back {
+      position: absolute;
+      @include sizes (100%, 100%);
+      backface-visibility: hidden;
+      background-color: $gris-claro;
+      padding: 20px;
+      border-radius: 5px;
+      transform: rotateY(180deg);
+
+      p {
+        font-size: small;
+      }
+    }
+  }
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}

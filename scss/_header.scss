@@ -1,0 +1,65 @@
+/*Encabezado*/
+
+header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $rosa;
+  z-index: 1;
+
+  div {
+    margin-left: 30px;
+
+    img {
+      width: 250px;
+    }
+  }
+}
+
+/*Menu*/
+
+.hamburgerMenu,
+.inputMenu {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+
+  li a {
+    margin: 30px;
+    font-size: 20px;
+    color: $verde-medio;
+    text-shadow: 0.5px 0.5px $verde-claro;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    &:hover {
+      color: $verde-oscuro;
+    }
+  }
+}
+
+/*Banner*/
+
+.banner {
+  height: 100px;
+  margin-top: 20px;
+  background-image: url(..//img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  h1 {
+    font-size: 40px;
+    color: $verde-medio;
+    text-shadow: 0.5px 0.5px 0.5px $verde-claro;
+    letter-spacing: 3px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 100px;
+  }
+}

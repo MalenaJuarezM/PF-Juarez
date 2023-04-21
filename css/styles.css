@@ -1,0 +1,638 @@
+@charset "UTF-8";
+/*Colores*/ /*Fuentes*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Noto+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap");
+@font-face {
+  font-family: "symbols";
+  src: url(..//fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format(svg), url(..//fonts/websymbols-regular-webfont.eot);
+  src: url(..//fonts/websymbols-regular-webfont.eot) format("embedded-opentype"), url(..//fonts/websymbols-regular-webfont.woff) format(woff), url(..//fonts/websymbols-regular-webfont.ttf) format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+/*Reseteo CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/*Pisando Bootstrap*/
+p,
+ul {
+  margin-bottom: 0px;
+}
+
+body {
+  background-color: rgb(220, 218, 188);
+}
+
+/*Estilos Generales*/
+.principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  font-size: 15px;
+}
+.principal h2, .principal h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(67, 85, 70);
+}
+.principal h3 {
+  font-style: oblique;
+}
+
+.description {
+  color: rgb(67, 85, 70);
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
+.description p {
+  margin-bottom: 10px;
+}
+
+/*Encabezado*/
+header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(247, 162, 186);
+  z-index: 1;
+}
+header div {
+  margin-left: 30px;
+}
+header div img {
+  width: 250px;
+}
+
+/*Menu*/
+.hamburgerMenu,
+.inputMenu {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+nav ul li a {
+  margin: 30px;
+  font-size: 20px;
+  color: rgb(67, 85, 70);
+  text-shadow: 0.5px 0.5px rgb(138, 170, 143);
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: rgb(3, 31, 7);
+}
+
+/*Banner*/
+.banner {
+  height: 100px;
+  margin-top: 20px;
+  background-image: url(..//img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.banner h1 {
+  font-size: 40px;
+  color: rgb(67, 85, 70);
+  text-shadow: 0.5px 0.5px 0.5px rgb(138, 170, 143);
+  letter-spacing: 3px;
+  font-weight: normal;
+  text-align: center;
+  line-height: 100px;
+}
+
+/*Footer*/
+footer section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(247, 162, 186);
+}
+footer section .details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  color: rgb(67, 85, 70);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+footer section .details .icon {
+  font-family: symbols;
+  font-size: 10px;
+  color: rgb(67, 85, 70);
+}
+footer section .social {
+  margin-right: 30px;
+}
+footer section .social .icon {
+  font-family: symbols;
+  font-size: 30px;
+  color: rgb(67, 85, 70);
+  padding: 5px;
+}
+footer section .social .icon:hover {
+  color: rgb(3, 31, 7);
+}
+
+/*GridIndex*/
+.gridIndex {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  margin: 60px;
+}
+.gridIndex .box {
+  grid-column: 1/5;
+}
+.gridIndex .carousel {
+  grid-column: 5/6;
+  margin: 0px;
+  padding: 0px;
+}
+.gridIndex .pics992 {
+  display: none;
+}
+
+/*GridEstilos + GridServicios*/
+.gridEstilos,
+.gridServicios {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 50px;
+  justify-items: center;
+  align-items: center;
+}
+.gridEstilos .Box1,
+.gridServicios .Box1 {
+  grid-column: 1/5;
+}
+.gridEstilos .Pic1,
+.gridServicios .Pic1 {
+  grid-column: 5/6;
+}
+.gridEstilos .Pic2,
+.gridServicios .Pic2 {
+  grid-column: 1/2;
+}
+.gridEstilos .Box2,
+.gridServicios .Box2 {
+  grid-column: 2/6;
+}
+.gridEstilos .Box3,
+.gridServicios .Box3 {
+  grid-column: 1/5;
+}
+.gridEstilos .Pic3,
+.gridServicios .Pic3 {
+  grid-column: 5/6;
+}
+.gridEstilos .Pic4,
+.gridServicios .Pic4 {
+  grid-column: 1/2;
+}
+.gridEstilos .Box4,
+.gridServicios .Box4 {
+  grid-column: 2/6;
+}
+
+.box {
+  max-width: 1000px;
+  min-height: 200px;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.box:hover {
+  background-color: rgb(243, 241, 239);
+}
+
+.pic img {
+  max-width: 250px;
+  border: 3px solid rgb(243, 241, 239);
+  border-radius: 5px;
+}
+
+/*Main de profes*/
+/*Rotating Card*/
+.flip-card {
+  width: 280px;
+  height: 380px;
+  margin-bottom: 20px;
+  perspective: 1000px;
+}
+.flip-card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
+}
+.flip-card .flip-card-inner .flip-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-card .flip-card-inner .flip-card-front img {
+  border: 3px solid rgb(243, 241, 239);
+  border-radius: 5px;
+  width: 100%;
+}
+.flip-card .flip-card-inner .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: rgb(243, 241, 239);
+  padding: 20px;
+  border-radius: 5px;
+  transform: rotateY(180deg);
+}
+.flip-card .flip-card-inner .flip-card-back p {
+  font-size: small;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/*Main de contacto*/
+.FlexContact {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/*Formulario*/
+.form {
+  max-width: 500px;
+  color: rgb(67, 85, 70);
+  margin: 0px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "nombre apellido" "line1 line2" "email telefono" "line3 line4" "comentario comentario" "line5 line5" "boton boton";
+}
+.form label {
+  margin-top: 20px;
+}
+.form .fillin {
+  background: none;
+  border: none;
+  border-bottom: 0.5px solid rgb(67, 85, 70);
+  margin-right: 20px;
+}
+.form .fillin:hover {
+  border: 0.5px solid rgb(67, 85, 70);
+  border-radius: 2px;
+}
+.form textarea {
+  grid-area: line5;
+  height: 70px;
+  resize: none;
+}
+.form .button {
+  grid-area: boton;
+  display: block;
+  width: 60px;
+  height: 25px;
+  margin: 0px auto;
+  margin-top: 20px;
+  border: 0.5px solid rgb(67, 85, 70);
+  border-radius: 2px;
+  background-color: rgb(243, 241, 239);
+  color: rgb(67, 85, 70);
+  cursor: pointer;
+}
+.form .button:hover {
+  border: 1px solid rgb(243, 241, 239);
+  background-color: rgb(67, 85, 70);
+  color: rgb(243, 241, 239);
+}
+
+form label:nth-child(1) {
+  grid-area: nombre;
+}
+
+form label:nth-child(2) {
+  grid-area: line1;
+}
+
+form label:nth-child(3) {
+  grid-area: apellido;
+}
+
+form label:nth-child(4) {
+  grid-area: line2;
+}
+
+form label:nth-child(5) {
+  grid-area: email;
+}
+
+form label:nth-child(6) {
+  grid-area: line3;
+}
+
+form label:nth-child(7) {
+  grid-area: telefono;
+}
+
+form label:nth-child(8) {
+  grid-area: line4;
+}
+
+form label:nth-child(9) {
+  grid-area: comentario;
+}
+
+.map iframe {
+  width: 450px;
+  height: 270px;
+}
+
+/*MediaQueries*/
+/*Tablet Estándar*/
+@media screen and (max-width: 992px) {
+  header {
+    height: 130px;
+    flex-wrap: wrap;
+  }
+  header div img {
+    margin-top: 20px;
+  }
+  ul {
+    padding-left: 0px;
+  }
+  footer section {
+    height: 80px;
+  }
+  /*Main general*/
+  .principal {
+    margin-top: 20px;
+  }
+  /*footer*/
+  footer section {
+    margin-top: 20px;
+  }
+  /*Index */
+  .gridIndex {
+    margin: 30px;
+  }
+  .gridIndex .box {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    padding: 20px 30px;
+    margin-top: 10px;
+  }
+  .gridIndex .carousel {
+    display: none;
+  }
+  .gridIndex .pics992 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    grid-column: 1/6;
+    grid-row: 2/3;
+    padding: 0px 40px;
+    margin-top: 10px;
+  }
+  .gridIndex .pics992 .pic {
+    margin: 10px;
+  }
+  /*GridEstilos + GridServicios*/
+  .gridEstilos,
+  .gridServicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-row-gap: 10px;
+    grid-column-gap: 0px;
+    margin: 0px;
+  }
+  .gridEstilos .Box1,
+  .gridServicios .Box1 {
+    grid-column: 1/5;
+  }
+  .gridEstilos .Pic1,
+  .gridServicios .Pic1 {
+    grid-column: 1/3;
+  }
+  .gridEstilos .Pic2,
+  .gridServicios .Pic2 {
+    grid-column: 3/5;
+  }
+  .gridEstilos .Box2,
+  .gridServicios .Box2 {
+    grid-column: 1/5;
+  }
+  .gridEstilos .Box3,
+  .gridServicios .Box3 {
+    grid-column: 1/5;
+  }
+  .gridEstilos .Pic3,
+  .gridServicios .Pic3 {
+    grid-column: 1/3;
+  }
+  .gridEstilos .Pic4,
+  .gridServicios .Pic4 {
+    grid-column: 3/5;
+  }
+  .gridEstilos .Box4,
+  .gridServicios .Box4 {
+    grid-column: 1/5;
+  }
+  .gridEstilos .box,
+  .gridServicios .box {
+    padding: 20px;
+    margin: 0px;
+  }
+  .gridEstilos .pic img,
+  .gridServicios .pic img {
+    max-width: 210px;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 805px) {
+  /*Menu Hamburguesa*/
+  .hamburgerMenu {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 30px;
+    color: rgb(67, 85, 70);
+    font-size: 35px;
+  }
+  header nav {
+    transform: translateX(-576px);
+    transition: 1s;
+    position: absolute;
+    background-color: rgb(247, 162, 186);
+    height: 100vh;
+    top: 100px;
+    padding: 20px;
+    z-index: 2;
+  }
+  header nav ul {
+    display: block;
+  }
+  header nav ul li {
+    padding-bottom: 20px;
+  }
+  header nav ul li a {
+    font-size: 20px;
+  }
+  header .inputMenu:checked + nav {
+    transform: translateX(0px);
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
+  }
+  /*Main de Contacto*/
+  .map {
+    margin-top: 20px;
+  }
+}
+/*Teléfonos en modo horizontal y tabletas pequeñas*/
+@media screen and (max-width: 576px) {
+  /*Header*/
+  header {
+    height: 100px;
+    flex-wrap: wrap;
+  }
+  header div img {
+    margin-top: 0px;
+    width: 200px;
+  }
+  /*Banner*/
+  .banner {
+    height: 80px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .banner h1 {
+    font-size: 35px;
+    line-height: 80px;
+  }
+  /*Main general*/
+  .principal {
+    font-size: 14px;
+  }
+  .principal h2, .principal h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .description p {
+    margin-bottom: 8px;
+  }
+}
+/*Teléfonos en modo vertical*/
+@media screen and (max-width: 540px) {
+  /* GridIndex */
+  .gridIndex {
+    margin: 10px;
+  }
+  /*GridEstilos + GridServicios*/
+  .gridEstilos,
+  .gridServicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-row-gap: 5px;
+    margin: 10px;
+  }
+  .gridEstilos .Box1,
+  .gridServicios .Box1 {
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+  .gridEstilos .Pic1,
+  .gridServicios .Pic1 {
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+  .gridEstilos .Pic2,
+  .gridServicios .Pic2 {
+    grid-column: 1/5;
+    grid-row: 4/5;
+  }
+  .gridEstilos .Box2,
+  .gridServicios .Box2 {
+    grid-column: 1/5;
+    grid-row: 3/4;
+  }
+  .gridEstilos .Box3,
+  .gridServicios .Box3 {
+    grid-column: 1/5;
+    grid-row: 5/6;
+  }
+  .gridEstilos .Pic3,
+  .gridServicios .Pic3 {
+    grid-column: 1/5;
+    grid-row: 6/7;
+  }
+  .gridEstilos .Pic4,
+  .gridServicios .Pic4 {
+    grid-column: 1/5;
+    grid-row: 8/9;
+  }
+  .gridEstilos .Box4,
+  .gridServicios .Box4 {
+    grid-column: 1/5;
+    grid-row: 7/8;
+  }
+}
+/*Teléfonos pequeños*/
+@media screen and (max-width: 448px) {
+  .principal {
+    margin: 0px;
+  }
+  /*Main de contacto*/
+  .form {
+    width: 340px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "nombre" "line1" "apellido" "line2" "email" "line3" "telefono" "line4" "comentario" "line5" "boton";
+  }
+  .form textarea {
+    height: 80px;
+  }
+  .map iframe {
+    max-width: 340px;
+  }
+}
+@media screen and (max-width: 370px) {
+  /*Banner*/
+  .banner {
+    height: 70px;
+  }
+  .banner h1 {
+    font-size: 30px;
+    line-height: 70px;
+  }
+  /*Contacto*/
+  .map iframe {
+    max-width: 310px;
+  }
+  /*Footer*/
+  footer section .details {
+    margin-left: 12px;
+  }
+  footer section .social {
+    margin-right: 12px;
+  }
+}/*# sourceMappingURL=styles.css.map */
