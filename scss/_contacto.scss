@@ -28,6 +28,7 @@
 
   .fillin {
     background: none;
+    padding: 3px 6px;
     border: none;
     border-bottom: $borde-general;
     margin-right: 20px;
@@ -42,25 +43,6 @@
     grid-area: line5;
     height: 70px;
     resize: none;
-  }
-
-  .button {
-    grid-area: boton;
-    display: block;
-    @include sizes (60px, 25px);
-    margin: 0px auto;
-    margin-top: 20px;
-    border: $borde-general;
-    border-radius: 2px;
-    background-color: $gris-claro;
-    color: $verde-medio;
-    cursor: pointer;
-
-    &:hover {
-      border: $borde-boton-hover;
-      background-color: $verde-medio;
-      color: $gris-claro;
-    }
   }
 }
 
@@ -101,5 +83,5 @@ form label:nth-child(9) {
 }
 
 .map iframe {
-  @include sizes (450px, 270px);
+  @include sizes(450px, 320px);
 }

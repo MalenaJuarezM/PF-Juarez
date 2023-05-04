@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "symbols";
-  src: url(..//fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format(svg),
+  src: url(..//fonts/websymbols-regular-webfont.svg#WebSymbolsRegular)
+      format(svg),
     url(..//fonts/websymbols-regular-webfont.eot);
   src: url(..//fonts/websymbols-regular-webfont.eot) format("embedded-opentype"),
     url(..//fonts/websymbols-regular-webfont.woff) format(woff),
@@ -38,7 +39,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px;
+  margin: 60px 30px;
   font-size: 15px;
 
   h2 {
@@ -70,7 +71,7 @@ body {
   justify-content: center;
 }
 
-@mixin sizes ($width, $height) {
+@mixin sizes($width, $height) {
   width: $width;
   height: $height;
 }

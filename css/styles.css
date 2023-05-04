@@ -30,7 +30,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px;
+  margin: 60px 30px;
   font-size: 15px;
 }
 .principal h2, .principal h3 {
@@ -95,7 +95,7 @@ nav ul li a:hover {
 /*Banner*/
 .banner {
   height: 100px;
-  margin-top: 20px;
+  margin-top: 40px;
   background-image: url(..//img/background.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -117,6 +117,7 @@ footer section {
   align-items: center;
   height: 80px;
   background-color: rgb(247, 162, 186);
+  margin-top: 40px;
 }
 footer section .details {
   display: flex;
@@ -125,6 +126,7 @@ footer section .details {
   color: rgb(67, 85, 70);
   font-size: 12px;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 footer section .details .icon {
   font-family: symbols;
@@ -144,23 +146,43 @@ footer section .social .icon:hover {
   color: rgb(3, 31, 7);
 }
 
-/*GridIndex*/
-.gridIndex {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 10px;
-  margin: 60px;
+/*Index*/
+.card {
+  height: 650px;
+  max-width: 400px;
+  background-color: rgb(220, 218, 188);
+  border: none;
+  padding: 5px;
+  margin: 15px;
+  margin-top: 50px;
 }
-.gridIndex .box {
-  grid-column: 1/5;
+.card:hover {
+  background-color: rgb(243, 241, 239);
 }
-.gridIndex .carousel {
-  grid-column: 5/6;
-  margin: 0px;
-  padding: 0px;
+.card .card-img-top {
+  border-radius: 5px;
 }
-.gridIndex .pics992 {
-  display: none;
+.card .card-body {
+  margin-top: 10px;
+}
+
+.button {
+  grid-area: boton;
+  display: block;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px 15px;
+  border: 0.5px solid rgb(67, 85, 70);
+  border-radius: 2px;
+  background-color: rgb(243, 241, 239);
+  color: rgb(67, 85, 70);
+  cursor: pointer;
+}
+.button:hover {
+  border: 1px solid rgb(243, 241, 239);
+  background-color: rgb(67, 85, 70);
+  color: rgb(243, 241, 239);
 }
 
 /*GridEstilos + GridServicios*/
@@ -207,8 +229,6 @@ footer section .social .icon:hover {
 }
 
 .box {
-  max-width: 1000px;
-  min-height: 200px;
   padding: 30px;
   border-radius: 5px;
   display: flex;
@@ -225,7 +245,7 @@ footer section .social .icon:hover {
   border-radius: 5px;
 }
 
-/*Main de profes*/
+/*Profes*/
 /*Rotating Card*/
 .flip-card {
   width: 280px;
@@ -292,6 +312,7 @@ footer section .social .icon:hover {
 }
 .form .fillin {
   background: none;
+  padding: 3px 6px;
   border: none;
   border-bottom: 0.5px solid rgb(67, 85, 70);
   margin-right: 20px;
@@ -304,24 +325,6 @@ footer section .social .icon:hover {
   grid-area: line5;
   height: 70px;
   resize: none;
-}
-.form .button {
-  grid-area: boton;
-  display: block;
-  width: 60px;
-  height: 25px;
-  margin: 0px auto;
-  margin-top: 20px;
-  border: 0.5px solid rgb(67, 85, 70);
-  border-radius: 2px;
-  background-color: rgb(243, 241, 239);
-  color: rgb(67, 85, 70);
-  cursor: pointer;
-}
-.form .button:hover {
-  border: 1px solid rgb(243, 241, 239);
-  background-color: rgb(67, 85, 70);
-  color: rgb(243, 241, 239);
 }
 
 form label:nth-child(1) {
@@ -362,10 +365,10 @@ form label:nth-child(9) {
 
 .map iframe {
   width: 450px;
-  height: 270px;
+  height: 320px;
 }
 
-/*MediaQueries*/
+/*Media Queries*/
 /*Tablet Estándar*/
 @media screen and (max-width: 992px) {
   header {
@@ -388,31 +391,6 @@ form label:nth-child(9) {
   /*footer*/
   footer section {
     margin-top: 20px;
-  }
-  /*Index */
-  .gridIndex {
-    margin: 30px;
-  }
-  .gridIndex .box {
-    grid-column: 1/6;
-    grid-row: 1/2;
-    padding: 20px 30px;
-    margin-top: 10px;
-  }
-  .gridIndex .carousel {
-    display: none;
-  }
-  .gridIndex .pics992 {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    grid-column: 1/6;
-    grid-row: 2/3;
-    padding: 0px 40px;
-    margin-top: 10px;
-  }
-  .gridIndex .pics992 .pic {
-    margin: 10px;
   }
   /*GridEstilos + GridServicios*/
   .gridEstilos,
@@ -520,7 +498,7 @@ form label:nth-child(9) {
   /*Banner*/
   .banner {
     height: 80px;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 15px;
   }
   .banner h1 {
@@ -538,13 +516,13 @@ form label:nth-child(9) {
   .description p {
     margin-bottom: 8px;
   }
+  /*Index*/
+  .card {
+    margin-top: 30px;
+  }
 }
 /*Teléfonos en modo vertical*/
 @media screen and (max-width: 540px) {
-  /* GridIndex */
-  .gridIndex {
-    margin: 10px;
-  }
   /*GridEstilos + GridServicios*/
   .gridEstilos,
   .gridServicios {
@@ -623,6 +601,12 @@ form label:nth-child(9) {
   .banner h1 {
     font-size: 30px;
     line-height: 70px;
+  }
+  /*Index*/
+  .card {
+    height: 590px;
+    margin: 10px;
+    margin-top: 20px;
   }
   /*Contacto*/
   .map iframe {

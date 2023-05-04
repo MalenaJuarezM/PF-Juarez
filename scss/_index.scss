@@ -1,22 +1,43 @@
-/*GridIndex*/
+/*Index*/
 
-.gridIndex {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 10px;
-  margin: 60px;
+.card {
+  height: 650px;
+  max-width: 400px;
+  background-color: $gris-medio;
+  border: none;
+  padding: 5px;
+  margin: 15px;
+  margin-top: 50px;
 
-  .box {
-    grid-column: 1/5;
+  &:hover {
+    background-color: $gris-claro;
   }
 
-  .carousel {
-    grid-column: 5/6;
-    margin: 0px;
-    padding: 0px;
+  .card-img-top {
+    border-radius: 5px;
   }
 
-  .pics992 {
-    display: none;
+  .card-body {
+    margin-top: 10px;
+  }
+}
+
+.button {
+  grid-area: boton;
+  display: block;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px 15px;
+  border: $borde-general;
+  border-radius: 2px;
+  background-color: $gris-claro;
+  color: $verde-medio;
+  cursor: pointer;
+
+  &:hover {
+    border: $borde-boton-hover;
+    background-color: $verde-medio;
+    color: $gris-claro;
   }
 }

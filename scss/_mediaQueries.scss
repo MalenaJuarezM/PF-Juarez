@@ -1,4 +1,4 @@
-/*MediaQueries*/
+/*Media Queries*/
 
 /*Tablet Estándar*/
 
@@ -33,35 +33,6 @@
   footer {
     section {
       margin-top: 20px;
-    }
-  }
-
-  /*Index */
-
-  .gridIndex {
-    margin: 30px;
-
-    .box {
-      grid-column: 1/6;
-      grid-row: 1/2;
-      padding: 20px 30px;
-      margin-top: 10px;
-    }
-
-    .carousel {
-      display: none;
-    }
-
-    .pics992 {
-      @include flex-row-wrap-center;
-      grid-column: 1/6;
-      grid-row: 2/3;
-      padding: 0px 40px;
-      margin-top: 10px;
-
-      .pic {
-        margin: 10px;
-      }
     }
   }
 
@@ -118,8 +89,6 @@
       margin: 10px;
     }
   }
-
-
 }
 
 @media screen and (max-width: 805px) {
@@ -156,7 +125,7 @@
     }
   }
 
-  header .inputMenu:checked+nav {
+  header .inputMenu:checked + nav {
     transform: translateX(0px);
     width: fill-available;
   }
@@ -187,7 +156,7 @@
 
   .banner {
     height: 80px;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 15px;
 
     h1 {
@@ -201,7 +170,6 @@
   .principal {
     font-size: 14px;
 
-
     h2 {
       margin-bottom: 10px;
       font-size: 16px;
@@ -211,17 +179,16 @@
   .description p {
     margin-bottom: 8px;
   }
+
+  /*Index*/
+  .card {
+    margin-top: 30px;
+  }
 }
 
 /*Teléfonos en modo vertical*/
 
 @media screen and (max-width: 540px) {
-  /* GridIndex */
-
-  .gridIndex {
-    margin: 10px;
-  }
-
   /*GridEstilos + GridServicios*/
 
   .gridEstilos,
@@ -312,7 +279,6 @@
 }
 
 @media screen and (max-width: 370px) {
-
   /*Banner*/
 
   .banner {
@@ -322,6 +288,13 @@
       font-size: 30px;
       line-height: 70px;
     }
+  }
+
+  /*Index*/
+  .card {
+    height: 590px;
+    margin: 10px;
+    margin-top: 20px;
   }
 
   /*Contacto*/
