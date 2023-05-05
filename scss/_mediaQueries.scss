@@ -16,12 +16,6 @@
     padding-left: 0px;
   }
 
-  footer {
-    section {
-      height: 80px;
-    }
-  }
-
   /*Main general*/
 
   .principal {
@@ -32,6 +26,7 @@
 
   footer {
     section {
+      height: 80px;
       margin-top: 20px;
     }
   }
@@ -248,6 +243,13 @@
     margin: 0px;
   }
 
+  /*Index*/
+  .card {
+    height: 630px;
+    margin: 10px;
+    margin-top: 20px;
+  }
+
   /*Main de contacto*/
 
   .form {
@@ -293,8 +295,6 @@
   /*Index*/
   .card {
     height: 590px;
-    margin: 10px;
-    margin-top: 20px;
   }
 
   /*Contacto*/

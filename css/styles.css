@@ -165,6 +165,9 @@ footer section .social .icon:hover {
 .card .card-body {
   margin-top: 10px;
 }
+.card .card-text {
+  height: 100px;
+}
 
 .button {
   grid-area: boton;
@@ -381,15 +384,13 @@ form label:nth-child(9) {
   ul {
     padding-left: 0px;
   }
-  footer section {
-    height: 80px;
-  }
   /*Main general*/
   .principal {
     margin-top: 20px;
   }
   /*footer*/
   footer section {
+    height: 80px;
     margin-top: 20px;
   }
   /*GridEstilos + GridServicios*/
@@ -578,6 +579,12 @@ form label:nth-child(9) {
   .principal {
     margin: 0px;
   }
+  /*Index*/
+  .card {
+    height: 630px;
+    margin: 10px;
+    margin-top: 20px;
+  }
   /*Main de contacto*/
   .form {
     width: 340px;
@@ -605,8 +612,6 @@ form label:nth-child(9) {
   /*Index*/
   .card {
     height: 590px;
-    margin: 10px;
-    margin-top: 20px;
   }
   /*Contacto*/
   .map iframe {
